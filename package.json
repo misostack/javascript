@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "babel src -d lib",
     "test": "jest",
     "server": "light-server -s ./coverage/lcov-report -w './coverage/lcov-report/**'"
   },
@@ -18,9 +19,15 @@
   },
   "homepage": "https://github.com/misostack/javascript#readme",
   "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.14.8",
+    "@babel/node": "^7.14.7",
     "@babel/preset-env": "^7.14.7",
     "babel-jest": "^27.0.6",
     "jest": "^27.0.6",
     "light-server": "^2.9.1"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
   }
 }
