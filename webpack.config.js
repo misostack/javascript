@@ -1,6 +1,7 @@
 const path = require("path");
 const src = path.resolve(__dirname, "src");
 const dist = path.resolve(__dirname, "docs");
+const Dotenv = require("dotenv-webpack");
 const webpack = require("webpack");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -72,6 +73,8 @@ const getPlugins = function (mode) {
         },
       ],
     }),
+    // dotenv
+    new Dotenv(),
   ];
   if (mode === "production") {
     plugins.unshift(new CleanWebpackPlugin());
