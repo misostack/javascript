@@ -1,7 +1,8 @@
 import axios from "axios";
+const baseURL = "http://localhost:1337";
 
 const axiosInstance = axios.create({
-  baseURL: process.env.baseURL || "https://misostack.herokuapp.com",
+  baseURL,
   timeout: 1000,
   headers: { "X-Custom-Header": "foobar" },
 });
